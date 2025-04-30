@@ -5,6 +5,7 @@ import { FaShoppingCart, FaHeart } from 'react-icons/fa';
 const ProductCard = ({ product, onNavigate, addToCart }) => {
   console.log('ProductCard - Props received:', {
     productId: product?.id,
+    productName: product?.name,
     hasOnNavigate: typeof onNavigate === 'function',
     hasAddToCart: typeof addToCart === 'function'
   });
@@ -15,22 +16,39 @@ const ProductCard = ({ product, onNavigate, addToCart }) => {
     e.preventDefault();
     e.stopPropagation();
     
-    console.log('Add to cart clicked for product:', id);
+    console.log('Add to cart clicked for product:', {
+      id,
+      name,
+      price,
+      category
+    });
     
     if (typeof addToCart === 'function') {
-      console.log('Calling addToCart function');
-      addToCart(product);
+      console.log('Calling addToCart function with product:', {
+        id,
+        name,
+        price,
+        category
+      });
+      addToCart({
+        id,
+        name,
+        image,
+        price,
+        description,
+        category
+      });
     } else {
       console.error('addToCart is not a function');
     }
   };
 
   const handleProductClick = (e) => {
-    // Only navigate if the click wasn't on a button
-    if (!e.target.closest('button')) {
-      console.log('Navigating to product:', id);
-      onNavigate(`/products/${category}/${id}`);
+    if (e.target.closest('.add-to-cart') || e.target.closest('.wishlist-btn')) {
+      return;
     }
+    console.log('Navigating to product:', id);
+    onNavigate(`/products/${category}/${id}`);
   };
 
   return (

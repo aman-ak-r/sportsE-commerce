@@ -12,8 +12,10 @@ function AppContent() {
   const [cart, setCart] = useState(() => {
     try {
       const savedCart = localStorage.getItem('cart');
-      console.log('Initial cart state:', savedCart);
-      return savedCart ? JSON.parse(savedCart) : [];
+      console.log('Loading initial cart from localStorage:', savedCart);
+      const parsedCart = savedCart ? JSON.parse(savedCart) : [];
+      console.log('Parsed cart:', parsedCart);
+      return parsedCart;
     } catch (error) {
       console.error('Error loading cart from localStorage:', error);
       return [];
@@ -21,9 +23,10 @@ function AppContent() {
   });
   
   useEffect(() => {
-    console.log('Cart state changed:', cart);
+    console.log('Cart state changed, saving to localStorage:', cart);
     try {
       localStorage.setItem('cart', JSON.stringify(cart));
+      console.log('Successfully saved cart to localStorage');
     } catch (error) {
       console.error('Error saving cart to localStorage:', error);
     }
@@ -36,6 +39,13 @@ function AppContent() {
 
   const addToCart = (product) => {
     console.log('Adding to cart:', product);
+    console.log('Product details:', {
+      id: product?.id,
+      name: product?.name,
+      price: product?.price,
+      category: product?.category
+    });
+    
     if (!product || !product.id) {
       console.error('Invalid product:', product);
       return;
@@ -46,6 +56,7 @@ function AppContent() {
       const existingItem = prevCart.find(item => item.id === product.id);
       
       if (existingItem) {
+        console.log('Found existing item:', existingItem);
         const newCart = prevCart.map(item =>
           item.id === product.id
             ? { ...item, quantity: (item.quantity || 0) + 1 }
@@ -55,6 +66,7 @@ function AppContent() {
         return newCart;
       }
       
+      console.log('Adding new item to cart');
       const newCart = [...prevCart, { ...product, quantity: 1 }];
       console.log('Updated cart (new item):', newCart);
       return newCart;
