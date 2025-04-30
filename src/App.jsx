@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, useNavigate, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
 import './App.css';
 import Header from './Components/Layout/Header';
 import HeroSection from './Components/Home/HeroSection';
@@ -9,71 +9,87 @@ import Cart from './Components/Cart/Cart';
 
 function AppContent() {
   const navigate = useNavigate();
-  const location = useLocation();
   const [cart, setCart] = useState(() => {
-    // Initialize cart from localStorage if available
-    const savedCart = localStorage.getItem('cart');
-    return savedCart ? JSON.parse(savedCart) : [];
+    try {
+      const savedCart = localStorage.getItem('cart');
+      console.log('Initial cart state:', savedCart);
+      return savedCart ? JSON.parse(savedCart) : [];
+    } catch (error) {
+      console.error('Error loading cart from localStorage:', error);
+      return [];
+    }
   });
   
-  // Save cart to localStorage whenever it changes
   useEffect(() => {
-    localStorage.setItem('cart', JSON.stringify(cart));
+    console.log('Cart state changed:', cart);
+    try {
+      localStorage.setItem('cart', JSON.stringify(cart));
+    } catch (error) {
+      console.error('Error saving cart to localStorage:', error);
+    }
   }, [cart]);
 
-  // Function to handle navigation
   const handleNavigation = (path) => {
     navigate(path);
     window.scrollTo(0, 0);
   };
 
-  // Function to add item to cart
   const addToCart = (product) => {
     console.log('Adding to cart:', product);
+    if (!product || !product.id) {
+      console.error('Invalid product:', product);
+      return;
+    }
+
     setCart(prevCart => {
+      console.log('Previous cart state:', prevCart);
       const existingItem = prevCart.find(item => item.id === product.id);
+      
       if (existingItem) {
         const newCart = prevCart.map(item =>
           item.id === product.id
-            ? { ...item, quantity: item.quantity + 1 }
+            ? { ...item, quantity: (item.quantity || 0) + 1 }
             : item
         );
         console.log('Updated cart (existing item):', newCart);
         return newCart;
       }
+      
       const newCart = [...prevCart, { ...product, quantity: 1 }];
       console.log('Updated cart (new item):', newCart);
       return newCart;
     });
-    // Show success message
-    alert(`${product.name} added to cart!`);
   };
 
-  // Function to remove item from cart
   const removeFromCart = (productId) => {
-    setCart(prevCart => prevCart.filter(item => item.id !== productId));
+    setCart(prevCart => {
+      const newCart = prevCart.filter(item => item.id !== productId);
+      console.log('Removed item from cart:', newCart);
+      return newCart;
+    });
   };
 
-  // Function to update item quantity
   const updateQuantity = (productId, newQuantity) => {
     if (newQuantity < 1) {
       removeFromCart(productId);
       return;
     }
-    setCart(prevCart =>
-      prevCart.map(item =>
+    setCart(prevCart => {
+      const newCart = prevCart.map(item =>
         item.id === productId
           ? { ...item, quantity: newQuantity }
           : item
-      )
-    );
+      );
+      console.log('Updated quantity in cart:', newCart);
+      return newCart;
+    });
   };
 
   return (
     <div className="app">
       <Header 
         onNavigate={handleNavigation} 
-        cartItemCount={cart.reduce((sum, item) => sum + item.quantity, 0)} 
+        cartItemCount={cart.reduce((sum, item) => sum + (item.quantity || 0), 0)} 
       />
       <main>
         <Routes>

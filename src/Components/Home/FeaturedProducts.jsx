@@ -9,6 +9,11 @@ import football from '../../assets/football.png';
 import badmintonRacket from '../../assets/badminton-racket.png';
 
 const FeaturedProducts = ({ onNavigate, addToCart }) => {
+  console.log('FeaturedProducts - Props:', {
+    hasOnNavigate: typeof onNavigate === 'function',
+    hasAddToCart: typeof addToCart === 'function'
+  });
+
   const featuredProducts = [
     {
       id: 1,
@@ -44,6 +49,15 @@ const FeaturedProducts = ({ onNavigate, addToCart }) => {
     }
   ];
 
+  const handleAddToCart = (product) => {
+    console.log('FeaturedProducts - handleAddToCart called with product:', product.id);
+    if (typeof addToCart === 'function') {
+      addToCart(product);
+    } else {
+      console.error('addToCart is not a function in FeaturedProducts');
+    }
+  };
+
   return (
     <section className="featured-products">
       <div className="section-header">
@@ -52,14 +66,17 @@ const FeaturedProducts = ({ onNavigate, addToCart }) => {
       </div>
 
       <div className="products-grid">
-        {featuredProducts.map(product => (
-          <ProductCard 
-            key={product.id} 
-            product={product}
-            onNavigate={onNavigate}
-            addToCart={addToCart}
-          />
-        ))}
+        {featuredProducts.map(product => {
+          console.log('Rendering ProductCard with product:', product.id);
+          return (
+            <ProductCard 
+              key={product.id} 
+              product={product}
+              onNavigate={onNavigate}
+              addToCart={handleAddToCart}
+            />
+          );
+        })}
       </div>
 
       <button 

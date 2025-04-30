@@ -3,19 +3,33 @@ import './ProductCard.css';
 import { FaShoppingCart, FaHeart } from 'react-icons/fa';
 
 const ProductCard = ({ product, onNavigate, addToCart }) => {
+  console.log('ProductCard - Props received:', {
+    productId: product?.id,
+    hasOnNavigate: typeof onNavigate === 'function',
+    hasAddToCart: typeof addToCart === 'function'
+  });
+
   const { name, image, price, description, category, id } = product;
 
-  const handleProductClick = () => {
-    onNavigate(`/products/${category}/${id}`);
-  };
-
   const handleAddToCart = (e) => {
-    e.stopPropagation(); // Prevent triggering the card click
-    console.log('Add to cart clicked for product:', product);
+    e.preventDefault();
+    e.stopPropagation();
+    
+    console.log('Add to cart clicked for product:', id);
+    
     if (typeof addToCart === 'function') {
+      console.log('Calling addToCart function');
       addToCart(product);
     } else {
-      console.error('addToCart is not a function:', addToCart);
+      console.error('addToCart is not a function');
+    }
+  };
+
+  const handleProductClick = (e) => {
+    // Only navigate if the click wasn't on a button
+    if (!e.target.closest('button')) {
+      console.log('Navigating to product:', id);
+      onNavigate(`/products/${category}/${id}`);
     }
   };
 
@@ -23,7 +37,13 @@ const ProductCard = ({ product, onNavigate, addToCart }) => {
     <div className="product-card" onClick={handleProductClick}>
       <div className="product-image">
         <img src={image} alt={name} />
-        <button className="wishlist-btn" onClick={(e) => e.stopPropagation()}>
+        <button 
+          className="wishlist-btn"
+          onClick={(e) => {
+            e.preventDefault();
+            e.stopPropagation();
+          }}
+        >
           <FaHeart />
         </button>
       </div>
@@ -33,7 +53,10 @@ const ProductCard = ({ product, onNavigate, addToCart }) => {
         <p className="description">{description}</p>
         <div className="price">₹{price}</div>
         
-        <button className="add-to-cart" onClick={handleAddToCart}>
+        <button 
+          className="add-to-cart" 
+          onClick={handleAddToCart}
+        >
           <FaShoppingCart />
           Add to Cart
         </button>

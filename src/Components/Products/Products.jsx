@@ -21,6 +21,8 @@ import golfStick from '../../assets/golf-stick.png';
 import golfBall from '../../assets/golf-ball.png';
 
 const Products = ({ onNavigate, addToCart }) => {
+  console.log('Products received addToCart:', typeof addToCart); // Debug log
+
   const [selectedCategory, setSelectedCategory] = useState('');
   const [sortBy, setSortBy] = useState('price-low');
 
