@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './HeroSection.css';
 import basketball from '../../assets/basketball.png';
 import football from '../../assets/football.png';
 import cricketBat from '../../assets/cricket-bat.png';
 import badmintonRacket from '../../assets/badminton-racket.png';
 
-const HeroSection = ({ onNavigate }) => {
+const HeroSection = () => {
+  const navigate = useNavigate();
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const slides = [
@@ -55,9 +57,9 @@ const HeroSection = ({ onNavigate }) => {
             <div className="slide-content">
               <h2>{slide.title}</h2>
               <p>{slide.description}</p>
-              <button 
-                className="shop-now-btn"
-                onClick={() => onNavigate(`products/${slide.category}`)}
+              <button
+                className="shop-now-btn btn btn-primary"
+                onClick={() => navigate('/products')}
               >
                 Shop Now
               </button>
@@ -65,13 +67,14 @@ const HeroSection = ({ onNavigate }) => {
           </div>
         ))}
       </div>
-      
+
       <div className="slider-dots">
         {slides.map((_, index) => (
           <button
             key={index}
             className={`dot ${index === currentSlide ? 'active' : ''}`}
             onClick={() => setCurrentSlide(index)}
+            aria-label={`Go to slide ${index + 1}`}
           />
         ))}
       </div>
@@ -80,3 +83,4 @@ const HeroSection = ({ onNavigate }) => {
 };
 
 export default HeroSection;
+

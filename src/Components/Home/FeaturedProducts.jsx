@@ -1,61 +1,22 @@
 import React from 'react';
-import './FeaturedProducts.css';
+import { useNavigate } from 'react-router-dom';
+import { useProducts } from '../../context/ProductContext';
+import { useCart } from '../../context/CartContext';
+import { useToast } from '../../context/ToastContext';
 import ProductCard from '../Shared/ProductCard';
+import './FeaturedProducts.css';
 
-// Import product images
-import cricketBat from '../../assets/cricket-bat.png';
-import basketball from '../../assets/basketball.png';
-import football from '../../assets/football.png';
-import badmintonRacket from '../../assets/badminton-racket.png';
+const FeaturedProducts = () => {
+  const navigate = useNavigate();
+  const { getFeaturedProducts } = useProducts();
+  const { addToCart } = useCart();
+  const { success } = useToast();
 
-const FeaturedProducts = ({ onNavigate, addToCart }) => {
-  console.log('FeaturedProducts - Props:', {
-    hasOnNavigate: typeof onNavigate === 'function',
-    hasAddToCart: typeof addToCart === 'function'
-  });
-
-  const featuredProducts = [
-    {
-      id: 1,
-      name: "Professional Cricket Bat",
-      image: cricketBat,
-      price: 2999,
-      description: "High-quality cricket bat for professional players",
-      category: 'cricket'
-    },
-    {
-      id: 2,
-      name: "Premium Basketball",
-      image: basketball,
-      price: 1499,
-      description: "Professional grade basketball",
-      category: 'basketball'
-    },
-    {
-      id: 3,
-      name: "Match Football",
-      image: football,
-      price: 1299,
-      description: "Official match football",
-      category: 'football'
-    },
-    {
-      id: 4,
-      name: "Badminton Racket",
-      image: badmintonRacket,
-      price: 1999,
-      description: "Professional badminton racket",
-      category: 'badminton'
-    }
-  ];
+  const featuredProducts = getFeaturedProducts(8);
 
   const handleAddToCart = (product) => {
-    console.log('FeaturedProducts - handleAddToCart called with product:', product.id);
-    if (typeof addToCart === 'function') {
-      addToCart(product);
-    } else {
-      console.error('addToCart is not a function in FeaturedProducts');
-    }
+    addToCart(product);
+    success(`${product.name} added to cart!`);
   };
 
   return (
@@ -66,22 +27,18 @@ const FeaturedProducts = ({ onNavigate, addToCart }) => {
       </div>
 
       <div className="products-grid">
-        {featuredProducts.map(product => {
-          console.log('Rendering ProductCard with product:', product.id);
-          return (
-            <ProductCard 
-              key={product.id} 
-              product={product}
-              onNavigate={onNavigate}
-              addToCart={handleAddToCart}
-            />
-          );
-        })}
+        {featuredProducts.map(product => (
+          <ProductCard
+            key={product.id}
+            product={product}
+            onAddToCart={handleAddToCart}
+          />
+        ))}
       </div>
 
-      <button 
-        className="view-all-btn"
-        onClick={() => onNavigate('/products')}
+      <button
+        className="view-all-btn btn btn-primary"
+        onClick={() => navigate('/products')}
       >
         View All Products
       </button>
@@ -90,3 +47,4 @@ const FeaturedProducts = ({ onNavigate, addToCart }) => {
 };
 
 export default FeaturedProducts;
+

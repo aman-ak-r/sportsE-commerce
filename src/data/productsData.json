@@ -1,0 +1,740 @@
+{
+  "products": [
+    {
+      "id": "cricket-001",
+      "name": "Professional Cricket Bat - English Willow",
+      "description": "Premium English willow cricket bat with perfect balance and sweet spot. Ideal for professional players.",
+      "price": 4999,
+      "discount": 10,
+      "finalPrice": 4499,
+      "category": "cricket",
+      "subcategory": "bats",
+      "image": "/src/assets/cricket-bat.png",
+      "brand": "MRF",
+      "stock": 25,
+      "rating": 4.8,
+      "reviews": 156,
+      "tags": [
+        "cricket",
+        "bat",
+        "professional",
+        "willow"
+      ],
+      "specs": {
+        "weight": "1.2 kg",
+        "size": "Short Handle",
+        "material": "English Willow"
+      }
+    },
+    {
+      "id": "cricket-002",
+      "name": "Kashmir Willow Cricket Bat",
+      "description": "Durable Kashmir willow bat perfect for practice and casual games.",
+      "price": 1999,
+      "discount": 15,
+      "finalPrice": 1699,
+      "category": "cricket",
+      "subcategory": "bats",
+      "image": "/src/assets/cricket-bat.png",
+      "brand": "SG",
+      "stock": 45,
+      "rating": 4.3,
+      "reviews": 89,
+      "tags": [
+        "cricket",
+        "bat",
+        "kashmir willow"
+      ],
+      "specs": {
+        "weight": "1.1 kg",
+        "size": "Full Size",
+        "material": "Kashmir Willow"
+      }
+    },
+    {
+      "id": "cricket-003",
+      "name": "Leather Cricket Ball - Red",
+      "description": "Professional grade red leather cricket ball for test matches.",
+      "price": 599,
+      "discount": 5,
+      "finalPrice": 569,
+      "category": "cricket",
+      "subcategory": "balls",
+      "image": "/src/assets/cricket-ball.png",
+      "brand": "Kookaburra",
+      "stock": 100,
+      "rating": 4.7,
+      "reviews": 234,
+      "tags": [
+        "cricket",
+        "ball",
+        "leather",
+        "red"
+      ],
+      "specs": {
+        "weight": "156g",
+        "type": "Test Match",
+        "material": "Leather"
+      }
+    },
+    {
+      "id": "cricket-004",
+      "name": "Complete Cricket Kit with Bag",
+      "description": "All-in-one cricket kit including bat, pads, gloves, helmet, and bag.",
+      "price": 8999,
+      "discount": 20,
+      "finalPrice": 7199,
+      "category": "cricket",
+      "subcategory": "kits",
+      "image": "/src/assets/cricketkit.png",
+      "brand": "Spartan",
+      "stock": 15,
+      "rating": 4.6,
+      "reviews": 67,
+      "tags": [
+        "cricket",
+        "kit",
+        "complete set"
+      ],
+      "specs": {
+        "includes": "Bat, Pads, Gloves, Helmet, Bag",
+        "size": "Adult"
+      }
+    },
+    {
+      "id": "football-001",
+      "name": "FIFA Quality Pro Football",
+      "description": "Official match ball with FIFA Quality Pro certification.",
+      "price": 2499,
+      "discount": 12,
+      "finalPrice": 2199,
+      "category": "football",
+      "subcategory": "balls",
+      "image": "/src/assets/football.png",
+      "brand": "Adidas",
+      "stock": 60,
+      "rating": 4.9,
+      "reviews": 312,
+      "tags": [
+        "football",
+        "ball",
+        "FIFA",
+        "professional"
+      ],
+      "specs": {
+        "size": "5",
+        "material": "Synthetic Leather",
+        "certification": "FIFA Quality Pro"
+      }
+    },
+    {
+      "id": "football-002",
+      "name": "Training Football - Size 5",
+      "description": "Durable training football for practice sessions.",
+      "price": 899,
+      "discount": 10,
+      "finalPrice": 809,
+      "category": "football",
+      "subcategory": "balls",
+      "image": "/src/assets/football.png",
+      "brand": "Nike",
+      "stock": 80,
+      "rating": 4.4,
+      "reviews": 178,
+      "tags": [
+        "football",
+        "ball",
+        "training"
+      ],
+      "specs": {
+        "size": "5",
+        "material": "PVC",
+        "type": "Training"
+      }
+    },
+    {
+      "id": "football-003",
+      "name": "Professional Football Boots",
+      "description": "Lightweight football boots with superior grip and comfort.",
+      "price": 3999,
+      "discount": 15,
+      "finalPrice": 3399,
+      "category": "football",
+      "subcategory": "shoes",
+      "image": "/src/assets/nike.png",
+      "brand": "Nike",
+      "stock": 35,
+      "rating": 4.7,
+      "reviews": 145,
+      "tags": [
+        "football",
+        "shoes",
+        "boots",
+        "cleats"
+      ],
+      "specs": {
+        "sizes": "6-12",
+        "material": "Synthetic",
+        "type": "Firm Ground"
+      }
+    },
+    {
+      "id": "basketball-001",
+      "name": "NBA Official Game Basketball",
+      "description": "Official NBA game basketball with premium grip.",
+      "price": 3499,
+      "discount": 10,
+      "finalPrice": 3149,
+      "category": "basketball",
+      "subcategory": "balls",
+      "image": "/src/assets/basketball.png",
+      "brand": "Spalding",
+      "stock": 40,
+      "rating": 4.8,
+      "reviews": 267,
+      "tags": [
+        "basketball",
+        "ball",
+        "NBA",
+        "official"
+      ],
+      "specs": {
+        "size": "7",
+        "material": "Composite Leather",
+        "type": "Indoor/Outdoor"
+      }
+    },
+    {
+      "id": "basketball-002",
+      "name": "Rubber Basketball - Size 7",
+      "description": "Durable rubber basketball for outdoor play.",
+      "price": 1299,
+      "discount": 8,
+      "finalPrice": 1195,
+      "category": "basketball",
+      "subcategory": "balls",
+      "image": "/src/assets/basketball.png",
+      "brand": "Nivia",
+      "stock": 70,
+      "rating": 4.2,
+      "reviews": 98,
+      "tags": [
+        "basketball",
+        "ball",
+        "outdoor"
+      ],
+      "specs": {
+        "size": "7",
+        "material": "Rubber",
+        "type": "Outdoor"
+      }
+    },
+    {
+      "id": "basketball-003",
+      "name": "High-Top Basketball Shoes",
+      "description": "Professional basketball shoes with ankle support and cushioning.",
+      "price": 5999,
+      "discount": 20,
+      "finalPrice": 4799,
+      "category": "basketball",
+      "subcategory": "shoes",
+      "image": "/src/assets/nike.png",
+      "brand": "Nike",
+      "stock": 28,
+      "rating": 4.9,
+      "reviews": 189,
+      "tags": [
+        "basketball",
+        "shoes",
+        "high-top"
+      ],
+      "specs": {
+        "sizes": "7-13",
+        "material": "Mesh + Synthetic",
+        "type": "High-Top"
+      }
+    },
+    {
+      "id": "badminton-001",
+      "name": "Carbon Fiber Badminton Racket",
+      "description": "Lightweight carbon fiber racket for professional play.",
+      "price": 2999,
+      "discount": 15,
+      "finalPrice": 2549,
+      "category": "badminton",
+      "subcategory": "rackets",
+      "image": "/src/assets/badminton-racket.png",
+      "brand": "Yonex",
+      "stock": 50,
+      "rating": 4.7,
+      "reviews": 156,
+      "tags": [
+        "badminton",
+        "racket",
+        "carbon fiber"
+      ],
+      "specs": {
+        "weight": "85g",
+        "material": "Carbon Fiber",
+        "grip": "G4"
+      }
+    },
+    {
+      "id": "badminton-002",
+      "name": "Aluminum Badminton Racket",
+      "description": "Affordable aluminum racket for beginners.",
+      "price": 899,
+      "discount": 10,
+      "finalPrice": 809,
+      "category": "badminton",
+      "subcategory": "rackets",
+      "image": "/src/assets/badmintonracket.png",
+      "brand": "Li-Ning",
+      "stock": 65,
+      "rating": 4.1,
+      "reviews": 87,
+      "tags": [
+        "badminton",
+        "racket",
+        "beginner"
+      ],
+      "specs": {
+        "weight": "95g",
+        "material": "Aluminum",
+        "grip": "G5"
+      }
+    },
+    {
+      "id": "badminton-003",
+      "name": "Feather Shuttlecocks - Pack of 12",
+      "description": "Professional grade feather shuttlecocks.",
+      "price": 1299,
+      "discount": 5,
+      "finalPrice": 1234,
+      "category": "badminton",
+      "subcategory": "shuttlecocks",
+      "image": "/src/assets/badmintonracket.png",
+      "brand": "Yonex",
+      "stock": 90,
+      "rating": 4.6,
+      "reviews": 203,
+      "tags": [
+        "badminton",
+        "shuttlecock",
+        "feather"
+      ],
+      "specs": {
+        "quantity": "12 pieces",
+        "type": "Feather",
+        "speed": "77"
+      }
+    },
+    {
+      "id": "tabletennis-001",
+      "name": "Professional Table Tennis Racket",
+      "description": "High-quality racket with excellent spin and control.",
+      "price": 1999,
+      "discount": 12,
+      "finalPrice": 1759,
+      "category": "tabletennis",
+      "subcategory": "rackets",
+      "image": "/src/assets/table-tennis-racket.png",
+      "brand": "Butterfly",
+      "stock": 45,
+      "rating": 4.7,
+      "reviews": 134,
+      "tags": [
+        "table tennis",
+        "racket",
+        "professional"
+      ],
+      "specs": {
+        "rubber": "ITTF Approved",
+        "blade": "5-ply wood",
+        "handle": "Flared"
+      }
+    },
+    {
+      "id": "tabletennis-002",
+      "name": "Table Tennis Balls - Pack of 50",
+      "description": "3-star quality table tennis balls for tournaments.",
+      "price": 799,
+      "discount": 8,
+      "finalPrice": 735,
+      "category": "tabletennis",
+      "subcategory": "balls",
+      "image": "/src/assets/table-tennis-balls.png",
+      "brand": "DHS",
+      "stock": 100,
+      "rating": 4.5,
+      "reviews": 167,
+      "tags": [
+        "table tennis",
+        "balls",
+        "3-star"
+      ],
+      "specs": {
+        "quantity": "50 pieces",
+        "quality": "3-star",
+        "color": "White"
+      }
+    },
+    {
+      "id": "hockey-001",
+      "name": "Composite Hockey Stick",
+      "description": "Lightweight composite hockey stick for field hockey.",
+      "price": 3499,
+      "discount": 15,
+      "finalPrice": 2974,
+      "category": "hockey",
+      "subcategory": "sticks",
+      "image": "/src/assets/hockey-stick-composite.png",
+      "brand": "Grays",
+      "stock": 30,
+      "rating": 4.6,
+      "reviews": 78,
+      "tags": [
+        "hockey",
+        "stick",
+        "composite"
+      ],
+      "specs": {
+        "weight": "520g",
+        "material": "Composite",
+        "bow": "24mm"
+      }
+    },
+    {
+      "id": "hockey-002",
+      "name": "Hockey Ball - Pack of 6",
+      "description": "Durable hockey balls for practice and matches.",
+      "price": 599,
+      "discount": 10,
+      "finalPrice": 539,
+      "category": "hockey",
+      "subcategory": "balls",
+      "image": "/src/assets/hockey-ball.png",
+      "brand": "TK",
+      "stock": 80,
+      "rating": 4.3,
+      "reviews": 92,
+      "tags": [
+        "hockey",
+        "ball"
+      ],
+      "specs": {
+        "quantity": "6 pieces",
+        "material": "Plastic",
+        "color": "White"
+      }
+    },
+    {
+      "id": "golf-001",
+      "name": "Titanium Driver Golf Club",
+      "description": "Professional titanium driver with maximum distance.",
+      "price": 8999,
+      "discount": 18,
+      "finalPrice": 7379,
+      "category": "golf",
+      "subcategory": "clubs",
+      "image": "/src/assets/golf-driver.png",
+      "brand": "Callaway",
+      "stock": 20,
+      "rating": 4.8,
+      "reviews": 112,
+      "tags": [
+        "golf",
+        "driver",
+        "titanium"
+      ],
+      "specs": {
+        "loft": "10.5°",
+        "material": "Titanium",
+        "shaft": "Graphite"
+      }
+    },
+    {
+      "id": "golf-002",
+      "name": "Golf Balls - Pack of 12",
+      "description": "Premium golf balls with excellent control and distance.",
+      "price": 1499,
+      "discount": 10,
+      "finalPrice": 1349,
+      "category": "golf",
+      "subcategory": "balls",
+      "image": "/src/assets/golf.png",
+      "brand": "Titleist",
+      "stock": 75,
+      "rating": 4.7,
+      "reviews": 198,
+      "tags": [
+        "golf",
+        "balls"
+      ],
+      "specs": {
+        "quantity": "12 pieces",
+        "type": "3-piece",
+        "compression": "90"
+      }
+    },
+    {
+      "id": "snooker-001",
+      "name": "Professional Snooker Cue",
+      "description": "Handcrafted ash wood snooker cue with brass joint.",
+      "price": 4999,
+      "discount": 12,
+      "finalPrice": 4399,
+      "category": "snooker",
+      "subcategory": "cues",
+      "image": "/src/assets/snooker.png",
+      "brand": "Riley",
+      "stock": 25,
+      "rating": 4.7,
+      "reviews": 89,
+      "tags": [
+        "snooker",
+        "cue",
+        "professional"
+      ],
+      "specs": {
+        "length": "57 inches",
+        "material": "Ash Wood",
+        "tip": "10mm"
+      }
+    },
+    {
+      "id": "snooker-002",
+      "name": "Snooker Ball Set - 22 Balls",
+      "description": "Complete set of professional snooker balls.",
+      "price": 2999,
+      "discount": 8,
+      "finalPrice": 2759,
+      "category": "snooker",
+      "subcategory": "balls",
+      "image": "/src/assets/snooker-balls.png",
+      "brand": "Aramith",
+      "stock": 35,
+      "rating": 4.9,
+      "reviews": 145,
+      "tags": [
+        "snooker",
+        "balls",
+        "set"
+      ],
+      "specs": {
+        "quantity": "22 balls",
+        "material": "Phenolic Resin",
+        "size": "52.5mm"
+      }
+    },
+    {
+      "id": "boardgame-001",
+      "name": "Wooden Chess Set with Board",
+      "description": "Handcrafted wooden chess set with folding board.",
+      "price": 1999,
+      "discount": 15,
+      "finalPrice": 1699,
+      "category": "boardgames",
+      "subcategory": "chess",
+      "image": "/src/assets/chess.png",
+      "brand": "Craftsman",
+      "stock": 40,
+      "rating": 4.6,
+      "reviews": 156,
+      "tags": [
+        "chess",
+        "board game",
+        "wooden"
+      ],
+      "specs": {
+        "board": "15 x 15 inches",
+        "material": "Sheesham Wood",
+        "pieces": "32"
+      }
+    },
+    {
+      "id": "boardgame-002",
+      "name": "Carrom Board - Tournament Size",
+      "description": "Professional tournament size carrom board.",
+      "price": 3499,
+      "discount": 10,
+      "finalPrice": 3149,
+      "category": "boardgames",
+      "subcategory": "carrom",
+      "image": "/src/assets/carrom.png",
+      "brand": "Surco",
+      "stock": 22,
+      "rating": 4.7,
+      "reviews": 98,
+      "tags": [
+        "carrom",
+        "board game"
+      ],
+      "specs": {
+        "size": "32 x 32 inches",
+        "material": "Plywood",
+        "type": "Tournament"
+      }
+    },
+    {
+      "id": "shoes-001",
+      "name": "Running Shoes - Men",
+      "description": "Lightweight running shoes with superior cushioning.",
+      "price": 4999,
+      "discount": 25,
+      "finalPrice": 3749,
+      "category": "shoes",
+      "subcategory": "running",
+      "image": "/src/assets/nike.png",
+      "brand": "Nike",
+      "stock": 55,
+      "rating": 4.8,
+      "reviews": 289,
+      "tags": [
+        "shoes",
+        "running",
+        "men"
+      ],
+      "specs": {
+        "sizes": "7-12",
+        "material": "Mesh",
+        "type": "Running"
+      }
+    },
+    {
+      "id": "shoes-002",
+      "name": "Training Shoes - Women",
+      "description": "Versatile training shoes for gym and fitness.",
+      "price": 3999,
+      "discount": 20,
+      "finalPrice": 3199,
+      "category": "shoes",
+      "subcategory": "training",
+      "image": "/src/assets/adidas.png",
+      "brand": "Adidas",
+      "stock": 48,
+      "rating": 4.6,
+      "reviews": 234,
+      "tags": [
+        "shoes",
+        "training",
+        "women"
+      ],
+      "specs": {
+        "sizes": "5-10",
+        "material": "Synthetic",
+        "type": "Training"
+      }
+    },
+    {
+      "id": "shoes-003",
+      "name": "Sports Sneakers - Unisex",
+      "description": "Comfortable sports sneakers for everyday wear.",
+      "price": 2999,
+      "discount": 15,
+      "finalPrice": 2549,
+      "category": "shoes",
+      "subcategory": "casual",
+      "image": "/src/assets/puma.png",
+      "brand": "Puma",
+      "stock": 60,
+      "rating": 4.5,
+      "reviews": 178,
+      "tags": [
+        "shoes",
+        "sneakers",
+        "casual"
+      ],
+      "specs": {
+        "sizes": "6-11",
+        "material": "Canvas + Rubber",
+        "type": "Casual"
+      }
+    }
+  ],
+  "categories": [
+    {
+      "id": "cricket",
+      "name": "Cricket",
+      "description": "Complete range of cricket equipment",
+      "image": "/src/assets/cricket-bat.png"
+    },
+    {
+      "id": "football",
+      "name": "Football",
+      "description": "Football gear for players of all levels",
+      "image": "/src/assets/football.png"
+    },
+    {
+      "id": "basketball",
+      "name": "Basketball",
+      "description": "Basketball equipment and accessories",
+      "image": "/src/assets/basketball.png"
+    },
+    {
+      "id": "badminton",
+      "name": "Badminton",
+      "description": "Badminton rackets and shuttlecocks",
+      "image": "/src/assets/badminton-racket.png"
+    },
+    {
+      "id": "tabletennis",
+      "name": "Table Tennis",
+      "description": "Table tennis equipment for all skill levels",
+      "image": "/src/assets/table-tennis.png"
+    },
+    {
+      "id": "hockey",
+      "name": "Hockey",
+      "description": "Field hockey sticks and accessories",
+      "image": "/src/assets/hockey.png"
+    },
+    {
+      "id": "golf",
+      "name": "Golf",
+      "description": "Premium golf clubs and balls",
+      "image": "/src/assets/golf.png"
+    },
+    {
+      "id": "snooker",
+      "name": "Snooker",
+      "description": "Professional snooker cues and balls",
+      "image": "/src/assets/snooker.png"
+    },
+    {
+      "id": "boardgames",
+      "name": "Board Games",
+      "description": "Chess, carrom, and other board games",
+      "image": "/src/assets/chess.png"
+    },
+    {
+      "id": "shoes",
+      "name": "Sports Shoes",
+      "description": "Athletic footwear for all sports",
+      "image": "/src/assets/nike.png"
+    }
+  ],
+  "brands": [
+    "Nike",
+    "Adidas",
+    "Puma",
+    "MRF",
+    "SG",
+    "Kookaburra",
+    "Spartan",
+    "Spalding",
+    "Nivia",
+    "Yonex",
+    "Li-Ning",
+    "Butterfly",
+    "DHS",
+    "Grays",
+    "TK",
+    "Callaway",
+    "Titleist",
+    "Riley",
+    "Aramith",
+    "Craftsman",
+    "Surco"
+  ]
+}

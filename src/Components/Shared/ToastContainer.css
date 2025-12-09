@@ -1,0 +1,27 @@
+.toast-container {
+    position: fixed;
+    top: 5rem;
+    right: 1.5rem;
+    z-index: var(--z-tooltip);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    pointer-events: none;
+}
+
+.toast-container>* {
+    pointer-events: all;
+}
+
+@media (max-width: 768px) {
+    .toast-container {
+        top: 4rem;
+        right: 1rem;
+        left: 1rem;
+    }
+
+    .toast {
+        width: 100%;
+        max-width: none;
+    }
+}
